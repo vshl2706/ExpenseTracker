@@ -29,7 +29,7 @@ app.use('/api/v1/transactions', require("./routes/transactionRoutes"));
 
 // Below two lines are added at the time of deployment
 // static files
-app.use(express.static(Path.join(__dirname, "./client/build")));
+app.use(express.static(path.join(__dirname, "./client/build")));
 
 app.get("*", function (req, res){
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
